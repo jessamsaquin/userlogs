@@ -26,7 +26,7 @@ namespace userlogs
                 SqlCommand cmd = new SqlCommand("INSERT INTO Users (UserId, UserName, Password, EmailAddress) VALUES (@UserId, @UserName, @Password, @EmailAddress)", conn);
                 cmd.Parameters.AddWithValue("@UserId", Guid.NewGuid());
                 cmd.Parameters.AddWithValue("@UserName", username);
-                cmd.Parameters.AddWithValue("@PasswordHash", password); // Hash this in production
+                cmd.Parameters.AddWithValue("@Password", password); // Hash this in production
                 cmd.Parameters.AddWithValue("@EmailAddress", email);
                 conn.Open();
                 cmd.ExecuteNonQuery();

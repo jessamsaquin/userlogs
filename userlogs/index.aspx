@@ -96,6 +96,41 @@
                             </asp:DropDownList>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                            <asp:Label runat="server" Text="Time Zone:"></asp:Label>
+                    </td>
+                    <td colspan="2">
+                            <asp:DropDownList ID="dlistTimeZone" runat="server" OnSelectedIndexChanged="dlistTimeZone_SelectedIndexChanged">
+                            <asp:ListItem Text="(UTC-12:00) International Date Line West" Value="-720"></asp:ListItem>
+    <asp:ListItem Text="(UTC-11:00) Coordinated Universal Time-11" Value="-660"></asp:ListItem>
+    <asp:ListItem Text="(UTC-10:00) Hawaii" Value="-600"></asp:ListItem>
+    <asp:ListItem Text="(UTC-09:00) Alaska" Value="-540"></asp:ListItem>
+    <asp:ListItem Text="(UTC-08:00) Pacific Time (US & Canada)" Value="-480"></asp:ListItem>
+    <asp:ListItem Text="(UTC-07:00) Mountain Time (US & Canada)" Value="-420"></asp:ListItem>
+    <asp:ListItem Text="(UTC-06:00) Central Time (US & Canada)" Value="-360"></asp:ListItem>
+    <asp:ListItem Text="(UTC-05:00) Eastern Time (US & Canada)" Value="-300"></asp:ListItem>
+    <asp:ListItem Text="(UTC-04:00) Atlantic Time (Canada)" Value="-240"></asp:ListItem>
+    <asp:ListItem Text="(UTC-03:00) Buenos Aires, Georgetown" Value="-180"></asp:ListItem>
+    <asp:ListItem Text="(UTC-02:00) Mid-Atlantic" Value="-120"></asp:ListItem>
+    <asp:ListItem Text="(UTC-01:00) Azores" Value="-60"></asp:ListItem>
+    <asp:ListItem Text="(UTC+00:00) Greenwich Mean Time" Value="0"></asp:ListItem>
+    <asp:ListItem Text="(UTC+01:00) Central European Time" Value="60"></asp:ListItem>
+    <asp:ListItem Text="(UTC+02:00) Eastern European Time" Value="120"></asp:ListItem>
+    <asp:ListItem Text="(UTC+03:00) Moscow, St. Petersburg" Value="180"></asp:ListItem>
+    <asp:ListItem Text="(UTC+04:00) Dubai" Value="240"></asp:ListItem>
+    <asp:ListItem Text="(UTC+05:00) Islamabad, Karachi" Value="300"></asp:ListItem>
+    <asp:ListItem Text="(UTC+06:00) Dhaka" Value="360"></asp:ListItem>
+    <asp:ListItem Text="(UTC+07:00) Bangkok, Hanoi, Jakarta" Value="420"></asp:ListItem>
+    <asp:ListItem Text="(UTC+08:00) Beijing, Hong Kong, Manila" Value="480"></asp:ListItem>
+    <asp:ListItem Text="(UTC+09:00) Tokyo, Seoul" Value="540"></asp:ListItem>
+    <asp:ListItem Text="(UTC+10:00) Sydney, Melbourne" Value="600"></asp:ListItem>
+    <asp:ListItem Text="(UTC+11:00) Solomon Islands" Value="660"></asp:ListItem>
+    <asp:ListItem Text="(UTC+12:00) Auckland, Wellington" Value="720"></asp:ListItem>    
+                            </asp:DropDownList>
+                            
+                    </td>
+                </tr>
                 <tr><td colspan="3"><hr/></td></tr>
 
                 <tr>

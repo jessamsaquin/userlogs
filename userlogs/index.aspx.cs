@@ -17,7 +17,29 @@ namespace userlogs
             if (!IsPostBack)
             {
                 clear();
+                LoadTimeZones();
             }
+        }
+        private void LoadTimeZones()
+        {
+            dlistTimeZone.Items.Clear();
+
+            // Get all system time zones
+            foreach (TimeZoneInfo timeZone in TimeZoneInfo.GetSystemTimeZones())
+            {
+                dlistTimeZone.Items.Add(new ListItem(timeZone.DisplayName, timeZone.BaseUtcOffset.TotalMinutes.ToString()));
+            }
+
+            // Select UTC as default
+            dlistTimeZone.SelectedValue = "0";
+        }
+        protected void dlistTimeZone_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Example: Get the selected value
+            string selectedTimeZone = dlistTimeZone.SelectedValue;
+
+            // You can use this value for further logic
+            //lblMessage.Text = "Selected Time Zone: " + selectedTimeZone;
         }
 
         protected void btnAddUser_Click(object sender, EventArgs e)
@@ -51,7 +73,7 @@ namespace userlogs
                     cmd.Parameters.AddWithValue("@NickName", txtnickName.Text.Trim());
                     cmd.Parameters.AddWithValue("@EmailAddress", txtemailAdd.Text.Trim());
                     cmd.Parameters.AddWithValue("@Department", dlistDepartment.SelectedValue);
-                    //cmd.Parameters.AddWithValue("@TimeZone", timeZone);
+                    cmd.Parameters.AddWithValue("@TimeZone", Convert.ToInt32(dlistTimeZone.SelectedValue));
                     cmd.Parameters.AddWithValue("@UserType", RadiouserType.SelectedValue);
                     cmd.Parameters.AddWithValue("@UserStatus", dlistUserstat.SelectedValue);
                     //cmd.Parameters.AddWithValue("@ArchivedDate", archivedDate);
@@ -74,5 +96,6 @@ namespace userlogs
                 dlistUserstat.SelectedValue = "0";
                 SuccessMgs.Text = ErrorMgs.Text = "";
             }
+
     }
 }

@@ -12,14 +12,6 @@
             <table>
                 <tr>
                     <td>
-                        <asp:Label runat="server" Text="Username:"></asp:Label>
-                    </td>
-                    <td colspan="2">
-                        <asp:TextBox id="txtuserName" runat="server"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
                         <asp:Label runat="server" Text="Last Name"></asp:Label>
                     </td>
                     <td colspan="2">
@@ -75,7 +67,7 @@
                     </td>
                     <td colspan="2">
                         
-                        <asp:RadioButtonList ID="RadiouserType" runat="server" Width="188px">
+                        <asp:RadioButtonList ID="RadiouserType" runat="server" Width="188px" style="margin-top: 6px">
                             <asp:ListItem Text="Employee" /><asp:ListItem Text="HR" />
                              <asp:ListItem Text="Admin" />  
 
@@ -94,8 +86,55 @@
                             </asp:DropDownList>
                     </td>
                 </tr>
+                <tr><td colspan="3"><hr/></td></tr>
 
-                
+                <tr>
+                    <td>
+                        <asp:Label runat="server" Text="Username:"></asp:Label>
+                    </td>
+                    <td colspan="2">
+                        <asp:TextBox id="txtuserName" runat="server"></asp:TextBox>
+                        <asp:Label runat="server" Text="*" ForeColor="Red"></asp:Label>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label runat="server" Text="Password:"></asp:Label>
+                    </td>
+                    <td colspan="2">
+                        <asp:TextBox id="TextBox1" runat="server" TextMode="Password"></asp:TextBox>
+                        <asp:Label runat="server" Text="*" ForeColor="Red"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label runat="server" Text="Confirm Password:"></asp:Label>
+                    </td>
+                    <td colspan="2">
+                        <asp:TextBox id="txtconfirmPassword" runat="server" TextMode="Password"></asp:TextBox>
+                    </td>
+                    </tr>
+
+                 <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <asp:Button ID="btnAddUser" runat="server" Text="Add User" />
+                    </td>
+                 </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <asp:Label ID="SuccessMgs" runat="server" Text="" Forecolor="Green"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <asp:Label ID="ErrorMgs" runat="server" Text="" forecolor="Red"></asp:Label>
+                    </td>
+                </tr>
+
              </table>
             
         </div>

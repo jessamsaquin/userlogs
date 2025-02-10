@@ -78,8 +78,9 @@
                     <td colspan="2">
                         
                         <asp:RadioButtonList ID="RadiouserType" runat="server" Width="188px" style="margin-top: 6px">
-                            <asp:ListItem Text="Employee" /><asp:ListItem Text="HR" />
-                             <asp:ListItem Text="Admin" />  
+                            <asp:ListItem Text="Employee" Value="3"/>
+                            <asp:ListItem Text="HR" Value="2"/>
+                             <asp:ListItem Text="Admin" Value="1"/>  
 
                         </asp:RadioButtonList>
                     </td>

@@ -74,8 +74,9 @@ namespace userlogs
                     cmd.Parameters.AddWithValue("@EmailAddress", txtemailAdd.Text.Trim());
                     cmd.Parameters.AddWithValue("@Department", dlistDepartment.SelectedValue);
                     cmd.Parameters.AddWithValue("@TimeZone", Convert.ToInt32(dlistTimeZone.SelectedValue));
-                    cmd.Parameters.AddWithValue("@UserType", RadiouserType.SelectedValue);
-                    cmd.Parameters.AddWithValue("@UserStatus", dlistUserstat.SelectedValue);
+                    cmd.Parameters.AddWithValue("@UserType", Convert.ToByte(RadiouserType.SelectedValue));
+                    cmd.Parameters.AddWithValue("@UserStatus", Convert.ToByte(dlistUserstat.SelectedValue));
+
                     //cmd.Parameters.AddWithValue("@ArchivedDate", archivedDate);
                     //cmd.Parameters.AddWithValue("@IsIn", isIn);
                     conn.Open();

@@ -42,7 +42,7 @@ namespace userlogs
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     // Add stored procedure parameters
-                    cmd.Parameters.AddWithValue("@UserId", Convert.ToInt32(hfUserID.Value == "" ? "0" : hfUserID.Value));
+                    cmd.Parameters.AddWithValue("@UserId", string.IsNullOrEmpty(hfUserID.Value) ? Guid.NewGuid() : Guid.Parse(hfUserID.Value));
                     cmd.Parameters.AddWithValue("@Username", txtuserName.Text.Trim());
                     cmd.Parameters.AddWithValue("@PasswordHash", txtPassword.Text.Trim());
                     cmd.Parameters.AddWithValue("@LastName", txtlastName.Text.Trim());

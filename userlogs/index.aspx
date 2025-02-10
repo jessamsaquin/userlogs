@@ -91,9 +91,9 @@
                     </td>
                     <td colspan="2">
                         <asp:DropDownList runat="server" ID="dlistUserstat">
-                            <asp:ListItem Text="Active " />
-                            <asp:ListItem Text="Suspended" />
-                            <asp:ListItem Text="Departed" />
+                            <asp:ListItem Text="Active " Value="3"/>
+                            <asp:ListItem Text="Suspended" Value="2"/>
+                            <asp:ListItem Text="Departed" Value="1"/>
                             </asp:DropDownList>
                     </td>
                 </tr>

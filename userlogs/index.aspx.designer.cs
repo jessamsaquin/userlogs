@@ -24,6 +24,15 @@ namespace userlogs
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// hfUserID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfUserID;
+
+        /// <summary>
         /// txtlastName control.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace userlogs
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtlastName;
+
+        /// <summary>
+        /// txtfirstName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtfirstName;
 
         /// <summary>
         /// txtmidName control.
@@ -78,13 +96,13 @@ namespace userlogs
         protected global::System.Web.UI.WebControls.RadioButtonList RadiouserType;
 
         /// <summary>
-        /// DropDownList1 control.
+        /// dlistUserstat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList dlistUserstat;
 
         /// <summary>
         /// txtuserName control.
@@ -96,13 +114,13 @@ namespace userlogs
         protected global::System.Web.UI.WebControls.TextBox txtuserName;
 
         /// <summary>
-        /// TextBox1 control.
+        /// txtPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtPassword;
 
         /// <summary>
         /// txtconfirmPassword control.

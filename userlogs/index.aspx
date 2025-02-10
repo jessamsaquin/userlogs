@@ -8,7 +8,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        
         <div>
+            <asp:hiddenfield id="hfUserID" runat="server" />
             <table>
                 <tr>
                     <td>
@@ -16,6 +18,14 @@
                     </td>
                     <td colspan="2">
                         <asp:TextBox id="txtlastName" runat="server"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label runat="server" Text="First Name"></asp:Label>
+                    </td>
+                    <td colspan="2">
+                        <asp:TextBox id="txtfirstName" runat="server"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -79,7 +89,7 @@
                         <asp:Label runat="server" Text="User Status"></asp:Label>
                     </td>
                     <td colspan="2">
-                        <asp:DropDownList runat="server" ID="DropDownList1">
+                        <asp:DropDownList runat="server" ID="dlistUserstat">
                             <asp:ListItem Text="Active " />
                             <asp:ListItem Text="Suspended" />
                             <asp:ListItem Text="Departed" />
@@ -103,7 +113,7 @@
                         <asp:Label runat="server" Text="Password:"></asp:Label>
                     </td>
                     <td colspan="2">
-                        <asp:TextBox id="TextBox1" runat="server" TextMode="Password"></asp:TextBox>
+                        <asp:TextBox id="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
                         <asp:Label runat="server" Text="*" ForeColor="Red"></asp:Label>
                     </td>
                 </tr>
@@ -119,7 +129,7 @@
                  <tr>
                     <td></td>
                     <td colspan="2">
-                        <asp:Button ID="btnAddUser" runat="server" Text="Add User" />
+                        <asp:Button ID="btnAddUser" runat="server" Text="Add User" OnClick="btnAddUser_Click" />
                     </td>
                  </tr>
                 <tr>
